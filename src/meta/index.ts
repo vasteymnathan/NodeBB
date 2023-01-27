@@ -6,17 +6,6 @@ import pubsub from '../pubsub';
 import slugify from '../slugify';
 
 import configs from './configs';
-import themes from './themes';
-import js from './js';
-import css from './css';
-import settings from './settings';
-import logs from './logs';
-import errors from './errors';
-import tags from './tags';
-import dependencies from './dependencies';
-import templates from './templates';
-import blacklist from './blacklist';
-import languages from './languages';
 
 import user from '../user';
 import groups from '../groups';
@@ -53,7 +42,6 @@ if (nconf.get('isPrimary')) {
         }
     });
 }
- 
 export function restart() {
     pubsub.publish('meta:restart', { hostname: os.hostname() });
     restart_helper();
