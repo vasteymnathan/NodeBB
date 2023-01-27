@@ -53,7 +53,7 @@ if (nconf.get('isPrimary')) {
         }
     });
 }
-
+ 
 export function restart() {
     pubsub.publish('meta:restart', { hostname: os.hostname() });
     restart_helper();
